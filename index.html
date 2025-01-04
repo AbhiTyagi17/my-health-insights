@@ -1,23 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Project</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - My Health Insights</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f6d365;
+
+    header {
+      background-color: #fda085;
+      color: black;
+      padding: 10px;
+      text-align: center;
+    }
+    .container {
+      padding: 20px;
+    }
+    .about-text {
+      margin: 20px 0;
+    }
+    .button-group {
+      margin-top: 20px;
+    }
+    button {
+      background-color: #fda085;
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #fda085;
+    }
+    #more-info {
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
 </head>
 <body>
-    <h1>MY HEALTH INSIGHTS</h1>
-    <br>ABOUT US.....</br>
-    <p>Welcome to My Health Insights!
 
-        Our mission is to empower individuals to take charge of their health by providing a seamless platform to save, manage, and access their medical prescriptions and explore trusted home remedies for everyday illnesses.
-        
-        We understand that staying organized with medical records and finding reliable health solutions can be challenging. That’s why we’ve created a user-friendly website designed to make it easy for you to store prescriptions for future reference and discover natural remedies that complement your well-being.
-        </p>
-        
-<a
-href="loginpage.html"> Let's start with your health insights....by logging in. </a>
+<header>
+  <h1>My Health Insights</h1>
+</header>
+
+<div class="container">
+  <h2>About Us</h2>
+  <p class="about-text">
+    Welcome to <strong>My Health Insights</strong>, your trusted platform for storing medical prescriptions and discovering effective home remedies for common illnesses.
+  </p>
+  <p class="about-text">
+    Our mission is to simplify health management by offering easy access to medical records and promoting natural remedies for better well-being.
+  </p>
+  <button onclick="showMore()">Learn More</button>
+  <p id="more-info">
+    This website is designed to help users track their health conveniently and make informed decisions for a healthier lifestyle.
+  </p>
+
+  <!-- Login/Signup Buttons -->
+  <div class="button-group">
+    <button onclick="redirectTologinpage()">Login</button>
+    <button onclick="redirectTosignin()">Signup</button>
+  </div>
+</div>
+
+<script>
+  function showMore() {
+    const moreInfo = document.getElementById('more-info');
+    if (moreInfo.style.display === 'none') {
+      moreInfo.style.display = 'block';
+    } else {
+      moreInfo.style.display = 'none';
+    }
+  }
+
+  function redirectToLogin() {
+    window.location.href = 'loginpage.html'; // Replace with your login page URL
+  }
+
+  function redirectToSignup() {
+    window.location.href = 'signin.html'; // Replace with your signup page URL
+  }
+</script>
+
 </body>
 </html>
+
 
 
